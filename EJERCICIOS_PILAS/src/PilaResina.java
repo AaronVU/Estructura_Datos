@@ -38,7 +38,6 @@ public class PilaResina {
         }
         return false;
 
-
     }
 
     public boolean llena(){
