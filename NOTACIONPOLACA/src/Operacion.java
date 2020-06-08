@@ -11,7 +11,9 @@ public class Operacion {
                 System.out.println("Ingresa el operando ");
                     b= a.nextInt();
                     cl.enconlar(b);
-                    d=d+cl.sacar();
+                    while(!cl.colaVacia()) {
+                        d = d + cl.sacar();
+                    }
             }
             cl.enconlar(d);
             res=cl.sacar();
@@ -34,7 +36,9 @@ public class Operacion {
                 System.out.println("Ingresa el operando ");
                     b= a.nextInt();
                     cl.enconlar(b);
-                    d=d-cl.sacar();
+                    while (!cl.colaVacia()) {
+                        d = d - cl.sacar();
+                    }
             }
             cl.enconlar(d);
             res=cl.sacar();
@@ -56,7 +60,9 @@ public class Operacion {
                 System.out.println("Ingresa el operando ");
                     b= a.nextInt();
                     cl.enconlar(b);
-                    d=(d)*(cl.sacar());
+                    while (!cl.colaVacia()) {
+                        d = (d) * (cl.sacar());
+                    }
             }
             cl.enconlar(d);
             res=cl.sacar();
@@ -78,7 +84,9 @@ public class Operacion {
                 System.out.println("Ingresa el operando ");
                     b=a.nextDouble();
                     cl.enconlar(b);
-                    d=(d)/((double)cl.sacar());
+                    while (!cl.colaVacia()) {
+                        d = (d) / ((double) cl.sacar());
+                    }
             }
             cl.enconlar(d);
             res=(double) cl.sacar();
