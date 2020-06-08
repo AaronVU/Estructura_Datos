@@ -11,10 +11,16 @@ public class Operacion {
                 System.out.println("Ingresa el operando ");
                     b= a.nextInt();
                     cl.enconlar(b);
-                    while(!cl.colaVacia()) {
-                        d = d + cl.sacar();
-                    }
-            }
+            } // FIN DEL FOR PARA DATOS
+
+            for (int i=0; i<5; i++)
+            {
+                if(!cl.colaVacia()) {
+                    d = d + cl.sacar();
+                }
+            }// FIN DEL FOR PARA LA OPERACION
+
+
             cl.enconlar(d);
             res=cl.sacar();
             System.out.println("El resultado es "+ res);
@@ -36,12 +42,20 @@ public class Operacion {
                 System.out.println("Ingresa el operando ");
                     b= a.nextInt();
                     cl.enconlar(b);
-                    while (!cl.colaVacia()) {
-                        d = d - cl.sacar();
-                    }
-            }
+            }// FIN DEL FOR PARA DATOS
+
+            for (int i=0; i<5; i++)
+            {
+                if(d == 0)
+                {
+                    d = d + cl.sacar();
+                }else {
+                    d = d - cl.sacar();
+                }
+            }// FIN DEL FOR PARA LA OPERACION
+
             cl.enconlar(d);
-            res=cl.sacar();
+            res = cl.sacar();
             System.out.println("El resultado es "+ res);
 
         }catch(ExcepcionColaLlena Err){
@@ -60,10 +74,15 @@ public class Operacion {
                 System.out.println("Ingresa el operando ");
                     b= a.nextInt();
                     cl.enconlar(b);
-                    while (!cl.colaVacia()) {
-                        d = (d) * (cl.sacar());
-                    }
-            }
+            }// FIN DEL FOR PARA DATOS
+
+            for (int i=0; i<5; i++)
+            {
+                if(!cl.colaVacia()) {
+                    d = d * cl.sacar();
+                }
+            } // FIN DEL FOR PARA REALIZAR OPERACION
+
             cl.enconlar(d);
             res=cl.sacar();
             System.out.println("El resultado es "+ res);
@@ -82,12 +101,20 @@ public class Operacion {
         try{
             for(int i=0; i<5; i++){
                 System.out.println("Ingresa el operando ");
-                    b=a.nextDouble();
+                    b = a.nextDouble();
                     cl.enconlar(b);
-                    while (!cl.colaVacia()) {
-                        d = (d) / ((double) cl.sacar());
-                    }
-            }
+            } // FIN DEL FOR PARA DATOS
+
+            for (int i=0; i<5; i++)
+            {
+                if(d == 1)
+                {
+                    d = ((double)cl.sacar());
+                }else {
+                    d = (d) / ((double) cl.sacar());
+                }
+            } // FIN PARA EL FOR PARA REALIZAR LA OPERACION
+
             cl.enconlar(d);
             res=(double) cl.sacar();
             System.out.println("El resultado es "+ res);
