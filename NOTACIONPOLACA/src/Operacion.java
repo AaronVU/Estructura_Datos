@@ -2,16 +2,16 @@ import java.util.*;
 public class Operacion {
 
     Scanner a = new Scanner(System.in);
+    String ope = "";
 
     public void Suma(int b,int d,int res){
 
         ColaEntera cl = new ColaEntera(5);
-        int reg[] = new int[5];
         try{
             for(int i=0; i<5; i++){
                 System.out.println("Ingresa el operando ");
-                    b= a.nextInt();
-                    reg[i]=b;
+                    b = a.nextInt();
+                    ope = ope + b + " ";
                     cl.enconlar(b);
             } // FIN DEL FOR PARA DATOS
 
@@ -26,11 +26,8 @@ public class Operacion {
             cl.enconlar(d);
             res=cl.sacar();
             System.out.println("El resultado es "+ res);
+            System.out.println("+ " + ope);
 
-            System.out.print("+ ");
-            for (int i = 0; i<reg.length; i++){
-                System.out.print(reg[i] + " ");
-            }
 
         }catch(ExcepcionColaLlena Err){
             System.out.println(Err.getMessage());
@@ -44,12 +41,11 @@ public class Operacion {
     public void Resta(int b,int d,int res){
 
         ColaEntera cl = new ColaEntera(5);
-        int reg[] = new int[5];
         try{
             for(int i=0; i<5; i++){
                 System.out.println("Ingresa el operando ");
                     b= a.nextInt();
-                    reg[i] = b;
+                    ope = ope + b + " ";
                     cl.enconlar(b);
             }// FIN DEL FOR PARA DATOS
 
@@ -66,11 +62,7 @@ public class Operacion {
             cl.enconlar(d);
             res = cl.sacar();
             System.out.println("El resultado es "+ res);
-
-            System.out.print("- ");
-            for (int i = 0; i<reg.length; i++){
-                System.out.print(reg[i] + " ");
-            }
+            System.out.println("- " + ope);
 
         }catch(ExcepcionColaLlena Err){
             System.out.println(Err.getMessage());
@@ -83,12 +75,11 @@ public class Operacion {
     public void Multiplicacion(int b, int d, int res){
 
         ColaEntera cl = new ColaEntera(5);
-        int reg[] = new int[5];
         try{
             for(int i=0; i<5; i++){
                 System.out.println("Ingresa el operando ");
                     b= a.nextInt();
-                    reg[i] = b;
+                    ope = ope + b + " ";
                     cl.enconlar(b);
             }// FIN DEL FOR PARA DATOS
 
@@ -102,12 +93,7 @@ public class Operacion {
             cl.enconlar(d);
             res=cl.sacar();
             System.out.println("El resultado es "+ res);
-
-            System.out.print("* ");
-            for (int i = 0; i<reg.length; i++){
-                System.out.print(reg[i] + " ");
-            }
-
+            System.out.println("* " + ope);
 
         }catch(ExcepcionColaLlena Err){
             System.out.println(Err.getMessage());
@@ -120,12 +106,11 @@ public class Operacion {
 
 
         ColaGen cl = new ColaGen(5);
-        double reg[] = new double[5];
         try{
             for(int i=0; i<5; i++){
                 System.out.println("Ingresa el operando ");
                     b = a.nextDouble();
-                    reg[i] = b;
+                    ope = ope+ b + " ";
                     cl.enconlar(b);
             } // FIN DEL FOR PARA DATOS
 
@@ -142,12 +127,7 @@ public class Operacion {
             cl.enconlar(d);
             res=(double) cl.sacar();
             System.out.println("El resultado es "+ res);
-
-            System.out.print("/ ");
-            for (int i = 0; i<reg.length; i++){
-                System.out.print(reg[i] + " ");
-            }
-
+            System.out.println("/ " + ope);
 
         }catch(ExcepcionColaLlena Err){
             System.out.println(Err.getMessage());
